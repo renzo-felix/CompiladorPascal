@@ -96,13 +96,15 @@ El objetivo es facilitar el soporte de **punteros** y **arrays** en el lenguaje 
 Programa ::= 'program' Identificador ';' Bloque '.'
 Bloque ::= ListaDeclaracionesVariables ListaSubProgramas ListaSentencias
 
-ListaDeclaracionesVariables ::= { DeclaracionVariable }
+ListaDeclaracionesVariables ::= var { DeclaracionVariable }
 DeclaracionVariable ::= ListaIdentificadores ':' Tipo ';'
 ListaIdentificadores ::= Identificador { ',' Identificador }
 Tipo ::= 'integer' | 'longint' | 'boolean'| ArrayType | PointerType
 
 ArrayType ::= 'array' '[' Range ']' 'of' Type
 PointerType ::= '^' Type
+
+Rango ::= Numero '..' Numero
 
 ListaSubProgramas ::= { DeclaracionSubprograma }
 DeclaracionSubprograma ::= DeclaracionFuncion
