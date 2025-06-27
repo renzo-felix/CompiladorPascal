@@ -1,0 +1,15 @@
+program ArrayEjemplo;
+
+var
+  A: array[1..5] of Integer;
+  i: Integer;
+
+begin
+
+  for i := 1 to 5 do
+    A[i] := i * 10;
+
+
+  for i := 1 to 5 do
+    WriteLn('A[', i, '] = ', A[i]);
+end.

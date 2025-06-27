@@ -1,0 +1,12 @@
+program PunteroEjemplo;
+
+var
+  p: ^Integer;
+
+begin
+  New(p);
+  p^ := 42;
+  WriteLn('El valor apuntado es: ', p^);
+
+  Dispose(p);
+end.
